@@ -44,11 +44,15 @@ post_data = [
 "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
 }]
 
-for user in post_data:
-    userid = user.get("userId")
-    id = user.get("id")
-    title = user.get("title")
-    body = user.get("body")
-    slug = title.lower().replace(' ','-').strip()
+# for user in post_data:
+#     userid = user.get("userId")
+#     id = user.get("id")
+#     title = user.get("title")
+#     body = user.get("body")
+#     slug = title.lower().replace(' ','-').strip()
 
-    print(userid, id, title, body, slug, sep = ',\n')
+#     print(userid, id, title, body, slug, sep = ',\n')
+
+for user in post_data:
+    slug = user.get("title").replace(' ','-').strip()
+    print(user, slug,'\n')
